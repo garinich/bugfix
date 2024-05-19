@@ -1,4 +1,4 @@
-name: Do a Duolingo lesson
+name: Do a Duolingo lesson Lilia
 
 on:
   workflow_dispatch:
