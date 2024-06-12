@@ -20,7 +20,7 @@ try {
 		},
 	).then((response) => response.json());
 
-	let xp = await start(process.env.LESSONS, process.env.TIMER, 0);
+	let xp = await start(process.env.LESSONS, process.env.TIMER, 0, fromLanguage, learningLanguage);
 
 
 
@@ -231,7 +231,7 @@ async function start(lessons, timer, xp){
 
 	if(lessons !== 0){
 		setTimeout(() => {
-			start(lessons,timer, xp);
+			start(lessons,timer, xp, fromLanguage, learningLanguage);
 		}, timer * 1000);
 	}
 
