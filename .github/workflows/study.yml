@@ -8,7 +8,6 @@ on:
         description: 'Number of lessons to be completed'
         required: false
         type: number
-        
       timer:
         default: 1
         description: 'Timer in seconds'
