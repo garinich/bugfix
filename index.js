@@ -20,6 +20,8 @@ try {
 		},
 	).then((response) => response.json());
 
+	console.log(`🎉 Start! Lessons = ${process.env.LESSONS}, Timer = ${process.env.TIMER}`);
+
 	await start(process.env.LESSONS, process.env.TIMER, 0, fromLanguage, learningLanguage, headers);
 
 
@@ -121,8 +123,6 @@ try {
 
 	// 	xp += response.xpGain;
 	// }
-
-	console.log(`🎉 Start! Lessons = ${process.env.LESSONS}, Timer = ${process.env.TIMER}`);
 } catch (error) {
 	console.log("❌ Something went wrong");
 	if (error instanceof Error) {
@@ -227,7 +227,7 @@ async function start(lessons, timer, xp, fromLanguage, learningLanguage, headers
 
 	xp += response.xpGain;
 
-	console.log(`🎉 You won ${xp} XP`, new Date().toDateString());
+	console.log(`🎉 You won ${xp} XP`, new Date().toString());
 
 	lessons--;
 
