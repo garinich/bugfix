@@ -130,7 +130,7 @@ try {
 	}
 }
 
-async function start(lessons, timer, xp){
+async function start(lessons, timer, xp, fromLanguage, learningLanguage){
 	const session = await fetch(
 		"https://www.duolingo.com/2017-06-30/sessions",
 		{
