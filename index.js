@@ -20,7 +20,7 @@ try {
 		},
 	).then((response) => response.json());
 
-	let xp = await start(process.env.LESSONS, process.env.TIMER, 0, fromLanguage, learningLanguage);
+	let xp = await start(process.env.LESSONS, process.env.TIMER, 0, fromLanguage, learningLanguage, headers);
 
 
 
@@ -130,7 +130,7 @@ try {
 	}
 }
 
-async function start(lessons, timer, xp, fromLanguage, learningLanguage){
+async function start(lessons, timer, xp, fromLanguage, learningLanguage, headers){
 	const session = await fetch(
 		"https://www.duolingo.com/2017-06-30/sessions",
 		{
@@ -231,7 +231,7 @@ async function start(lessons, timer, xp, fromLanguage, learningLanguage){
 
 	if(lessons !== 0){
 		setTimeout(() => {
-			start(lessons,timer, xp, fromLanguage, learningLanguage);
+			start(lessons,timer, xp, fromLanguage, learningLanguage, headers);
 		}, timer * 1000);
 	}
 
