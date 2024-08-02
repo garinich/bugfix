@@ -1,6 +1,6 @@
 try {
 	const LESSONS = process.env.LESSONS ?? 1;
-	const TIMER = process.env.TIMER ?? 1;
+	const TIMER = process.env.TIMER ?? 0;
 	const JWT = process.env.DUOLINGO_JWT;
 
 	const headers = {
