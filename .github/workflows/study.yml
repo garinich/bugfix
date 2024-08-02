@@ -1,4 +1,4 @@
-name: Do a Duolingo lesson
+name: Do a lessons
 
 on:
   workflow_dispatch:
