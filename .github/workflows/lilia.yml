@@ -1,4 +1,4 @@
-name: Do a Duolingo lesson Lilia
+name: Do a lesson Lilia
 
 on:
   workflow_dispatch:
@@ -6,6 +6,11 @@ on:
       lessons:
         default: 1
         description: 'Number of lessons to be completed'
+        required: false
+        type: number
+      timer:
+        default: 0
+        description: 'Timer in seconds'
         required: false
         type: number
 
@@ -23,3 +28,4 @@ jobs:
         env:
           DUOLINGO_JWT: ${{ secrets.DUOLINGO_JWT2 }}
           LESSONS: ${{ inputs.lessons }}
+          TIMER: ${{ inputs.timer }}
