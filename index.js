@@ -145,14 +145,4 @@ async function start(lessons, timer, xp, fromLanguage, learningLanguage, headers
 	}
 
 	return xp;
-} catch (error) {
-	console.log("❌ Total ERROR: ", error);
-
-	for(let key of error){
-		console.log(`${key}: ${error[key]}`);
-	}
-
-	if (error instanceof Error) {
-		console.log(error.message);
-	}
 }
