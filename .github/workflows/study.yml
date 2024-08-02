@@ -9,7 +9,7 @@ on:
         required: false
         type: number
       timer:
-        default: 1
+        default: 0
         description: 'Timer in seconds'
         required: false
         type: number
